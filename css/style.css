@@ -1,0 +1,369 @@
+/*基本設定*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+/*網站基準值設定*/
+:root {
+    /*網站色彩命名*/
+    --green_main: #3F5D45ff;
+    --green_light: #EAF0EDff;
+    --yellow: #FFE180ff;
+
+    /*文字尺寸設定*/
+    --h1: 36px;
+    --h2: 32px;
+    --h3: 28px;
+    --h4: 24px;
+    --h5: 20px;
+    --h6: 18px;
+    --normal: 16px;
+    --small: 14px;
+    --mini: 12px;
+}
+
+/*容器寬度*/
+.w1024px {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+/*nav區域*/
+.nav {
+    width: 940px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.main-logo .brand-name a {
+    display: block;
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/student-week1/logo-all-dark.svg);
+    background-repeat: no-repeat;
+    width: 220px;
+    height: 40px;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li a {
+    padding: 0 30px;
+    color: var(--green_main);
+    font-size: var(--normal);
+    font-weight: 500;
+}
+
+.menu li a:hover {
+    color: var(--yellow);
+    text-decoration: underline;
+}
+
+/*header區域*/
+.header {
+    width: 940px;
+    margin: 0 auto 60px;
+}
+
+/*content區域*/
+.content {
+    width: 940px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-column {
+    flex: 1;
+    font-size: var(--h4);
+    text-align: center;
+    font-weight: 500;
+}
+
+.category {
+    background-color: var(--green_main);
+    color: var(--green_light);
+    padding: 16px 0;
+}
+
+.item {
+    border: 1px solid var(--green_light);
+    border-top: none;
+}
+
+.item a {
+    display: block;
+    width: auto;
+    color: var(--green_main);
+    padding: 16px 0;
+}
+
+.item a:hover {
+    background-color: var(--green_light);
+}
+
+.right-column {
+    flex: 2;
+}
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.product-item {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.photo {
+    width: 300px;
+    height: 315px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.photo p {
+    background-color: var(--green_main);
+    color: var(--green_light);
+    font-size: var(--normal);
+    font-weight: 500;
+    letter-spacing: 4px;
+    height: 100px;
+    padding: 10px;
+    writing-mode: vertical-lr;
+}
+
+.photo img {
+    width: 25px;
+    margin-top: 10px;
+}
+
+.item1 {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/p-1.png);
+}
+
+.item2 {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/p-2.png);
+}
+
+.item3 {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/p-3.png);
+}
+
+.item4 {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/p-4.png);
+}
+
+.item5 {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/p-5.png);
+}
+
+.item6 {
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/p-6.png);
+}
+
+.dessert {
+    text-align: center;
+    color: var(--green_main);
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid var(--green_light);
+}
+
+.name {
+    font-size: var(--h5);
+    font-weight: 200;
+    width: 173px;
+    padding: 14px 0;
+    border-right: 1px solid var(--green_light);
+}
+
+.price {
+    font-size: var(--h5);
+    width: 127px;
+    padding: 14px 0;
+}
+
+.product-item .add-to-cart {
+    display: block;
+    background-color: var(--green_light);
+    color: var(--green_main);
+    font-size: var(--h4);
+    font-weight: 500;
+    text-align: center;
+    padding: 16px 90px;
+}
+
+.product-item .add-to-cart:hover {
+    color: var(--green_light);
+    background-color: var(--green_main);
+}
+
+.page {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0 60px;
+    border-right: 1px solid var(--green_light);
+}
+
+.page li a {
+    color: var(--green_main);
+    font-size: var(--h5);
+    font-weight: 200;
+    display: block;
+    padding: 15px 20px;
+    border: 1px solid var(--green_light);
+    border-right: none;
+}
+
+.arrow img {
+    width: 24px;
+}
+
+.arrow:hover {
+    background-color: var(--green_light);
+}
+
+.number:hover {
+    color: var(--green_light);
+    background-color: var(--green_main);
+    font-weight: 500;
+}
+
+/*subscribe區域*/
+.subscribe {
+    background-color: var(--green_main);
+}
+
+.subscribe .w1024px {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 122px;
+}
+
+.apply {
+    display: flex;
+}
+
+.apply img {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
+
+.apply h5 {
+    color: var(--green_light);
+    font-size: var(--h4);
+}
+
+.form  form{
+    display: flex;
+}
+
+.form input[type=text] {
+    width: 316px;
+    height: 56px;
+    border: none;
+    background-color: var(--green_light);
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/mail-24px.png);
+    background-position: 20px 16px;
+    background-repeat: no-repeat;
+    padding-left: 50px;
+    font-size: var(--h6);
+    color: var(--green_main);
+}
+
+.form input[type=submit] {
+    width: 64px;
+    height: 56px;
+    background-color: var(--yellow);
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/arrow_forward-24px.png);
+    background-repeat: no-repeat;
+    background-position: 20px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/*footer區域*/
+.footer {
+    background-color: var(--green_light);
+}
+
+.footer .w1024px {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 122px 30px;
+}
+
+.left-side img{
+    width: 171.22px;
+    height: 26.6px;
+    margin-top: 38.9px;
+}
+
+.info {
+    margin-top: 115.5px;
+}
+
+.info li a {
+    color: var(--green_main);
+    font-size: var(--normal);
+}
+
+.social-media {
+    display: flex;
+}
+
+.social-media li a img {
+    width: 32px;
+    height: 32px;
+    margin: 30px 8px 0 0;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.right-side img {
+    width: 59.28px;
+    height: 218.69px;
+    margin-top: 30px;
+}
+
+.right-side p {
+    color: var(--green_main);
+    font-family: 'Times',serif;
+    font-size: var(--normal);
+    margin-top:50px;
+}
